@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #4facfe, #00f2fe); /* Default gradient */
+  animation: gradient-animation 10s infinite alternate;
+}
+
+/* Rainbow text animation */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow-text 5s linear infinite;
+}
+
+@keyframes rainbow-text {
+  0% {
+      background-position: 0%;
+  }
+  100% {
+      background-position: 100%;
+  }
+}
+
+/* App Container */
+.app-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Input and Button */
+#city-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 200px;
+  font-size: 16px;
+}
+
+#search-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: transform 0.3s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 0px 20px 5px rgba(0, 91, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* Weather Card */
+.weather-card {
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: white;
+}
+
+.weather-time {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.city-name {
+  font-size: 24px;
+}
+
+.temperature {
+  font-size: 48px;
+  margin: 10px 0;
+}
