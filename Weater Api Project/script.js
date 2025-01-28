@@ -1,5 +1,5 @@
 // API Key and Base URL for Weather Data
-const weatherApiKey = "4f1cc2c0c01343bcb70121757252101";
+const weatherApiKey = "Api Key Is Hide For Security Purpose";
 const weatherBaseUrl = "http://api.weatherapi.com/v1/current.json";
 
 // DOM Elements
@@ -14,7 +14,7 @@ const humidityElem = document.querySelector(".humidity");
 const windSpeedElem = document.querySelector(".wind-speed");
 const appContainer = document.querySelector(".app-container"); // For changing background
 
-// Function to Fetch Weather Data
+
 async function fetchWeather(city) {
   try {
     const response = await fetch(`${weatherBaseUrl}?key=${weatherApiKey}&q=${city}&aqi=yes`);
@@ -29,7 +29,7 @@ async function fetchWeather(city) {
   }
 }
 
-// Function to Update the Weather Card
+
 function updateWeatherCard(data) {
   cityNameElem.textContent = data.location.name;
   weatherTimeElem.textContent = `Local Time: ${data.location.localtime}`;
@@ -40,7 +40,7 @@ function updateWeatherCard(data) {
   weatherCard.style.display = "block"; // Show the card
 }
 
-// Function to Update Background
+
 function updateBackground(data) {
   const temperature = data.current.temp_c;
 
@@ -56,7 +56,7 @@ function updateBackground(data) {
   appContainer.style.backgroundPosition = "center";
 }
 
-// Event Listener for Search Button
+
 searchButton.addEventListener("click", () => {
   const city = cityInput.value.trim();
   if (city) {
@@ -66,7 +66,7 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-// Event Listener for Enter Key
+
 cityInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     const city = cityInput.value.trim();
